@@ -22,15 +22,15 @@ classdef WaypointGeneration < handle
 
             % Process path and turn into waypoints
             kmlRaw = obj.kml2struct(obj.dataFile);
-            waypoints = obj.process(kmlRaw);
+            [waypoints,refLL] = obj.process(kmlRaw);
 
             % Save waypoints to output directory
             if obj.save
-                save(append(dirs.output,fileName,'.mat'),"waypoints")
+                save(append(dirs.output,fileName,'.mat'),"waypoints","refLL")
             end
         end
 
-        function waypoints = process(obj,kml)
+        function [waypoints,refLL] = process(obj,kml)
 
             i = 1;
             count = 1;

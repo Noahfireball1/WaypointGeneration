@@ -14,7 +14,7 @@ dirs.output = append(projectRoot,filesep,'waypoints',filesep);
 
 %% Select .kmz or .kml file to process
 inputFile = uigetfile({'*.yaml'},'Select Input File',dirs.config);
-inputFilePath = append(dirs.data,inputFile);
+inputFilePath = append(dirs.config,inputFile);
 
 %% Process selected file
 WG = WaypointGeneration(inputFilePath,dirs);
