@@ -1,0 +1,7 @@
+%% Formatting
+clc
+clear
+close all
+format shortg
+
+%% Select .kmz or .kml file to process

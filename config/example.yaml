@@ -1,0 +1,5 @@
+# Example Configuration File for DCAM
+WaypointGeneration:
+  kmlFile: SCurveFlightPath
+  altitude: 1150 # (1) [m]
+  save: 1
